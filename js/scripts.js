@@ -2,7 +2,7 @@
 function beepboop(numberInput) {
   var numOut = [];
 
-  for (var i = 0; 1 <= numberInput; 1++) {
+  for (var i = 0; i <= numberInput; i++) {
     if (i.toString().includes("3")) {
       numOut.push("Won't you be my neighbor?");
     } else if (i.toString().includes("2")) {
@@ -20,8 +20,9 @@ function beepboop(numberInput) {
 $(document).ready(function() {
   $("form#beep").submit(function(event) {
     event.preventDefault();
-    var numberInput = parseInt($("input#number").val());
+    var numberInput = parseInt($("input#numberInput").val());
     var output = beepboop(numberInput);
+
     $("#result").text(output);
   });
 });
